@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPro Studio - Aprimoramento de Imagens para Delivery</title>
+    <meta name="description" content="Transforme suas fotos de delivery em imagens profissionais que aumentam suas vendas no iFood e outras plataformas">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-logo">
+                <h2>WebPro Studio</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transforme suas fotos e aumente suas vendas no delivery</h1>
+            <p>Deixe suas imagens do iFood, Uber Eats e Rappi irresistíveis com nosso serviço profissional de aprimoramento de imagens</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('planos')">Quero melhorar minhas fotos</button>
+                <button class="btn-secondary" onclick="scrollToSection('sobre')">Como funciona</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-comparison">
+                <div class="before">
+                    <img src="before-image.jpg" alt="Antes do tratamento" />
+                </div>
+                <div class="after">
+                    <img src="after-image.jpg" alt="Depois do tratamento" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>+87%</h3>
+                    <p>Aumento no engajamento</p>
+                </div>
+                <div class="stat-item">
+                    <h3>+63%</h3>
+                    <p>Mais cliques nas fotos</p>
+                </div>
+                <div class="stat-item">
+                    <h3>+45%</h3>
+                    <p>Aumento nas vendas</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24h</h3>
+                    <p>Entrega rápida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2>Como transformamos suas fotos</h2>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <p>Sabemos que uma boa imagem pode fazer toda a diferença no delivery. Muitos restaurantes perdem vendas por usar fotos escuras, desfocadas ou com má qualidade.</p>
+                    <p>Nosso serviço profissional transforma suas imagens com:</p>
+                    <ul>
+                        <li>✅ Correção de cores e iluminação</li>
+                        <li>✅ Remoção de ruídos e imperfeições</li>
+                        <li>✅ Ajuste de contraste e saturação</li>
+                        <li>✅ Melhoria de foco e nitidez</li>
+                        <li>✅ Formatação ideal para plataformas</li>
+                    </ul>
+                </div>
+                <div class="sobre-processo">
+                    <div class="processo-step">
+                        <span>1</span>
+                        <p>Você envia suas fotos atuais</p>
+                    </div>
+                    <div class="processo-step">
+                        <span>2</span>
+                        <p>Nossa equipe trabalha nas melhorias</p>
+                    </div>
+                    <div class="processo-step">
+                        <span>3</span>
+                        <p>Receba suas imagens aprimoradas em 24h</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios Section -->
+    <section id="beneficios" class="beneficios">
+        <div class="container">
+            <h2>Por que escolher o WebPro Studio?</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">🚀</div>
+                    <h3>Resultados Rápidos</h3>
+                    <p>Entregamos suas imagens aprimoradas em até 24 horas úteis</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">💼</div>
+                    <h3>Profissionais Especializados</h3>
+                    <p>Equipe com experiência em food photography e edição</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">📱</div>
+                    <h3>Otimizado para Apps</h3>
+                    <p>Imagens formatadas especificamente para iFood, Uber Eats e Rappi</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">💸</div>
+                    <h3>Preço Acessível</h3>
+                    <p>Serviço profissional por um preço que cabe no seu negócio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos Section -->
+    <section id="planos" class="planos">
+        <div class="container">
+            <h2>Escolha o plano ideal para seu negócio</h2>
+            <div class="planos-grid">
+                <div class="plano-card">
+                    <h3>Plano Básico</h3>
+                    <div class="preco">R$ 49,90</div>
+                    <p>Para pequenos estabelecimentos</p>
+                    <ul>
+                        <li>✅ 5 imagens</li>
+                        <li>✅ Correções básicas</li>
+                        <li>✅ Formatação padrão</li>
+                        <li>✅ Suporte por email</li>
+                    </ul>
+                    <button class="btn-primary" onclick="window.location.href='https://mpago.la/2NKzVCz'">Começar agora</button>
+                </div>
+                <div class="plano-card popular">
+                    <div class="popular-badge">Mais Popular</div>
+                    <h3>Plano Profissional</h3>
+                    <div class="preco">R$ 99,90</div>
+                    <p>Para restaurantes em crescimento</p>
+                    <ul>
+                        <li>✅ 15 imagens</li>
+                        <li>✅ Edição avançada</li>
+                        <li>✅ Background profissional</li>
+                        <li>✅ Prioridade na entrega</li>
+                        <li>✅ Suporte prioritário</li>
+                    </ul>
+                    <button class="btn-primary" onclick="window.location.href='https://mpago.la/1sXEdRU'">Começar agora</button>
+                </div>
+                <div class="plano-card">
+                    <h3>Plano Premium</h3>
+                    <div class="preco">R$ 199,90</div>
+                    <p>Para grandes redes</p>
+                    <ul>
+                        <li>✅ 40 imagens</li>
+                        <li>✅ Edição premium completa</li>
+                        <li>✅ Background personalizado</li>
+                        <li>✅ Entrega expressa (12h)</li>
+                        <li>✅ Suporte 24/7</li>
+                        <li>✅ Consultoria gratuita</li>
+                    </ul>
+                    <button class="btn-primary" onclick="window.location.href='https://mpago.la/2rmA2ge'">Começar agora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section class="depoimentos">
+        <div class="container">
+            <h2>O que nossos clientes dizem</h2>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <div class="depoimento-text">
+                        "As vendas do meu hamburguer artesanal aumentaram 50% depois que melhorei as fotos no iFood. Valeu cada centavo!"
+                    </div>
+                    <div class="depoimento-author">
+                        <strong>Carlos - Hamburgueria Artesanal</strong>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento-text">
+                        "Finalmente minhas pizzas parecem tão gostosas na foto quanto são na realidade. Clientes não param de elogiar!"
+                    </div>
+                    <div class="depoimento-author">
+                        <strong>Ana - Pizzaria Donatello</strong>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento-text">
+                        "O serviço é rápido e as imagens ficaram perfeitas. Agora meus pratos se destacam entre os concorrentes."
+                    </div>
+                    <div class="depoimento-author">
+                        <strong>Ricardo - Comida Japonesa Sushi</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-item">
+                <h3>Quanto tempo leva para receber minhas imagens?</h3>
+                <p>Entregamos em até 24 horas úteis para a maioria dos planos. O plano Premium tem entrega expressa de 12 horas.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Quais formatos de imagem vocês aceitam?</h3>
+                <p>Aceitamos JPG, PNG e HEIC. As imagens devem ter pelo menos 800x600 pixels para garantir boa qualidade.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Como faço para enviar minhas imagens?</h3>
+                <p>Após a contratação, você receberá um email com um link exclusivo para upload das suas imagens.</p>
+            </div>
+            <div class="faq-item">
+                <h3>E se não gostar do resultado?</h3>
+                <p>Impossível não gostar! Mas oferecemos revisões até você ficar 100% satisfeito com o resultado.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Pronto para transformar suas vendas?</h2>
+            <p>Comece hoje mesmo e veja a diferença que imagens profissionais fazem no seu negócio</p>
+            <button class="btn-primary btn-large" onclick="scrollToSection('planos')">Quero melhorar minhas fotos</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>WebPro Studio</h3>
+                    <p>Transformando imagens, transformando vendas.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>contato@webprostudio.com.br</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <p>Instagram: @web.pro.studio</p>
+                    <p>WhatsApp: (11) 99185-4713</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 WebPro Studio. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
