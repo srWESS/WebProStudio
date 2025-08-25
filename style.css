@@ -720,3 +720,129 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* Estilos para a página de orientação */
+.orientacao {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.orientacao h1 {
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.passo-a-passo {
+    background: #f7fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.passo-a-passo h2 {
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.passo-a-passo ul {
+    list-style: none;
+}
+
+.passo-a-passo li {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.passo-a-passo li strong {
+    color: #ff6b35;
+}
+
+#email {
+    background: #ff6b35;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.passo-a-passo button {
+    background: #ff6b35;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    transition: background 0.3s;
+}
+
+.passo-a-passo button:hover {
+    background: #e55a2b;
+}
+
+.duvidas {
+    background: #fff3e0;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #ff6b35;
+}
+
+.duvidas h2 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.duvidas p {
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.btn-whatsapp {
+    background: #25d366;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background: #128c7e;
+}
+
+/* Responsividade para orientação */
+@media (max-width: 768px) {
+    .orientacao {
+        margin: 80px auto;
+        padding: 1rem;
+    }
+    
+    .orientacao h1 {
+        font-size: 2rem;
+    }
+    
+    .passo-a-passo, .duvidas {
+        padding: 1.5rem;
+    }
+    
+    .passo-a-passo li {
+        font-size: 1rem;
+    }
+}
