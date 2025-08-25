@@ -136,28 +136,80 @@ function setupIntersectionObserver() {
     });
 }
 
-// Menu mobile (para futura implementação)
+// Menu mobile completo
 function setupMobileMenu() {
     const menuToggle = document.createElement('button');
     menuToggle.innerHTML = '☰';
-    menuToggle.style.cssText = `
-        display: none;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: #333;
-    `;
+    menuToggle.className = 'menu-toggle';
     
     const nav = document.querySelector('.nav');
-    if (nav && window.innerWidth <= 768) {
-        menuToggle.style.display = 'block';
+    if (nav) {
         nav.appendChild(menuToggle);
         
-        menuToggle.addEventListener('click', () => {
-            const navMenu = document.querySelector('.nav-menu');
-            if (navMenu) {
-                navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        // Criar overlay para fechar o menu
+        const overlay = document.createElement('div');
+        overlay.className = 'menu-overlay';
+        document.body.appendChild(overlay);
+        
+        const navMenu = document.querySelector('.nav-menu');
+        
+        // Função para abrir o menu
+        function openMenu() {
+            navMenu.classList.add('active');
+            overlay.classList.add('active');
+            menuToggle.classList.add('active');
+            menuToggle.innerHTML = '✕';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Função para fechar o menu
+        function closeMenu() {
+            navMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            menuToggle.classList.remove('active');
+            menuToggle.innerHTML = '☰';
+            document.body.style.overflow = '';
+        }
+        
+        // Toggle do menu ao clicar no botão
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (navMenu.classList.contains('active')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+        
+        // Fechar menu ao clicar no overlay
+        overlay.addEventListener('click', closeMenu);
+        
+        // Fechar menu ao clicar em um link
+        const menuLinks = navMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+        
+        // Fechar menu ao redimensionar a janela para desktop
+        function handleResize() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+                menuToggle.style.display = 'none';
+            } else {
+                menuToggle.style.display = 'block';
+            }
+        }
+        
+        // Inicializar estado do botão
+        handleResize();
+        
+        // Adicionar listener para redimensionamento
+        window.addEventListener('resize', handleResize);
+        
+        // Fechar menu com a tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMenu();
             }
         });
     }
