@@ -215,15 +215,14 @@ function setupMobileMenu() {
     }
 }
 
-// Efeito de parallax suave
+// Efeito de parallax suave (apenas para ícones de benefícios)
 function setupParallax() {
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
-        const parallaxElements = document.querySelectorAll('.hero-image, .beneficio-icon');
+        const parallaxElements = document.querySelectorAll('.beneficio-icon');
         
         parallaxElements.forEach(element => {
-            const speed = element.classList.contains('hero-image') ? 0.5 : 0.3;
-            element.style.transform = `translateY(${scrolled * speed}px)`;
+            element.style.transform = `translateY(${scrolled * 0.3}px)`;
         });
     });
 }
@@ -263,12 +262,16 @@ function updateDeliveryTime() {
     const isBusinessHours = hour >= 9 && hour < 18 && now.getDay() >= 1 && now.getDay() <= 5;
     
     const deliveryElements = document.querySelectorAll('.stat-item:last-child h3');
-    deliveryElements.forEach(element => {
+    deliveryElements.forEach((element, index) => {
         if (isBusinessHours) {
             const remainingHours = 18 - hour;
-            element.textContent = remainingHours + 'h';
+            if (index === deliveryElements.length - 1) {
+                element.textContent = '24h'; // Entrega rápida
+            } else {
+                element.textContent = remainingHours + 'h'; // Outras estatísticas
+            }
         } else {
-            element.textContent = '24h';
+            element.textContent = '24h'; // Entrega rápida
         }
     });
 }

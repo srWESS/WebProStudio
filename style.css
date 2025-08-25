@@ -242,9 +242,21 @@ body {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Alterado para 2 colunas em mobile */
     gap: 2rem;
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas em desktop */
+    }
+}
+
+.stat-item {
+    position: relative; /* Adicionado para evitar sobreposição */
+    z-index: 1; /* Garantir que os itens fiquem acima de outros elementos */
+    padding: 1rem; /* Adicionado padding para melhor espaçamento */
 }
 
 .stat-item h3 {
