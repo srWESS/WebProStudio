@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientação Antes do Pagamento - WebPro Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-logo">
+                <img src="logow.png" alt="Logo" style="height: 50px; margin-right: 10px;">
+                <h2>WebPro Studio</h2>
+            </div>
+        </nav>
+    </header>
+
+    <section class="orientacao">
+        <h1>Estamos quase lá! Veja como funciona após o pagamento</h1>
+        <div class="passo-a-passo">
+            <h2>📦 Passo a passo visual</h2>
+            <ul>
+                <li>🧾 <strong>Confirmação do pagamento:</strong> Você será redirecionado ao Mercado Pago para concluir sua compra com segurança.</li>
+                <li>📤 <strong>Envio das fotos:</strong> Após o pagamento, envie suas fotos para o e-mail: <span id="email">contato@webprostudio.com.br</span> <button onclick="copyEmail()">Copiar e-mail</button></li>
+                <li>🎨 <strong>Processo de edição:</strong> Nossa equipe vai tratar suas imagens com qualidade profissional. O prazo de entrega é de até 24h.</li>
+                <li>📬 <strong>Recebimento:</strong> Você receberá as fotos editadas diretamente no seu e-mail, prontas para usar no seu cardápio ou app de delivery.</li>
+            </ul>
+        </div>
+        <div class="duvidas">
+            <h2>💬 Dúvidas?</h2>
+            <p>Se tiver qualquer dúvida, fale com a gente pelo WhatsApp!</p>
+            <a href="https://wa.me/5511991854713?text=Gostaria%20de%20saber%20mais%20sobre%20o%20serviço" class="btn-whatsapp">Fale conosco pelo WhatsApp</a>
+        </div>
+        <button class="btn-primary" id="btn-pagamento">Entendi, quero continuar para o pagamento</button>
+        <button class="btn-secondary" onclick="voltarParaPrincipal()">Voltar para a Página Principal</button>
+    </section>
+
+    <script>
+        function copyEmail() {
+            const email = document.getElementById('email').innerText;
+            navigator.clipboard.writeText(email).then(() => {
+                alert('E-mail copiado: ' + email);
+            });
+        }
+
+        // Função para obter parâmetro da URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Configurar o botão de pagamento baseado no plano
+        document.addEventListener('DOMContentLoaded', function() {
+            const plano = getQueryParam('plano');
+            const btnPagamento = document.getElementById('btn-pagamento');
+            
+            let linkPagamento = 'https://mpago.la/2NKzVCz'; // Padrão: Plano Básico
+            
+            if (plano === 'profissional') {
+                linkPagamento = 'https://mpago.la/1sXEdRU';
+            } else if (plano === 'premium') {
+                linkPagamento = 'https://mpago.la/2rmA2ge';
+            }
+            
+            btnPagamento.onclick = function() {
+                // Marcar que o usuário viu a orientação antes de ir para o pagamento
+                localStorage.setItem('orientacaoVista', 'true');
+                window.location.href = linkPagamento;
+            };
+        });
+
+        // Função para voltar à página principal e limpar o estado
+        function voltarParaPrincipal() {
+            // Limpar o estado para garantir que na próxima vez ele passe pela orientação
+            localStorage.removeItem('orientacaoVista');
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>
