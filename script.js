@@ -289,6 +289,20 @@
         
         // Configurar menu mobile
         setupMobileMenu();
+
+        // Abrir menu mobile automaticamente na página inicial
+        if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '') {
+            const navMenu = document.querySelector('.nav-menu');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const overlay = document.querySelector('.menu-overlay');
+            if (navMenu && menuToggle && overlay) {
+                navMenu.classList.add('active');
+                overlay.classList.add('active');
+                menuToggle.classList.add('active');
+                menuToggle.innerHTML = '✕';
+                document.body.style.overflow = 'hidden';
+            }
+        }
         
         // Configurar parallax
         setupParallax();
@@ -302,14 +316,31 @@
         // Atualizar a cada hora
         setInterval(updateDeliveryTime, 3600000);
         
-        // Adicionar event listeners para botões
-        const buttons = document.querySelectorAll('button[onclick*="scrollToSection"]');
-        buttons.forEach(button => {
-            const match = button.getAttribute('onclick').match(/scrollToSection\('(.+)'\)/);
-            if (match) {
-                button.addEventListener('click', () => scrollToSection(match[1]));
+    // Adicionar event listeners para botões
+    const buttons = document.querySelectorAll('button[onclick*="scrollToSection"]');
+    buttons.forEach(button => {
+        const match = button.getAttribute('onclick').match(/scrollToSection\('(.+)'\)/);
+        if (match) {
+            button.addEventListener('click', () => scrollToSection(match[1]));
+        }
+    });
+
+    // Corrigir problema de scroll travado ao clicar em "Início" na página blog.html
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.location.pathname.endsWith('blog.html')) {
+            const inicioLink = document.querySelector('a[href="index.html"]');
+            if (inicioLink) {
+                inicioLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    // Navegar para index.html e forçar scroll para o topo após carregamento
+                    window.location.href = 'index.html';
+                    window.addEventListener('load', () => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    });
+                });
             }
-        });
+        }
+    });
         
         // Efeito de hover nos cards de planos
         const planCards = document.querySelectorAll('.plano-card');

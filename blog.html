@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Blog - WebPro Studio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <div class="nav-logo">
-                <img src="logow.png" alt="Logo do WebPro Studio" style="height: 50px; margin-right: 10px;">
+                <img src="logow.png" alt="Logo do WebPro Studio" style="height: 50px; margin-right: 10px;" />
                 <h2>WebPro Studio</h2>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#beneficios">Benefícios</a></li>
-                <li><a href="#planos">Planos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#beneficios">Benefícios</a></li>
+                <li><a href="index.html#planos">Planos</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
@@ -28,19 +28,71 @@
         <div class="container">
             <h1>Blog do WebPro Studio</h1>
             <p>Aqui você encontrará dicas e novidades sobre edição de fotos e marketing para delivery.</p>
-            <h2>Postagens Recentes</h2>
-            <ul>
-                <li><strong>Título da Postagem 1</strong> - Resumo da postagem 1.</li>
-                <li><strong>Título da Postagem 2</strong> - Resumo da postagem 2.</li>
-                <li><strong>Título da Postagem 3</strong> - Resumo da postagem 3.</li>
-            </ul>
+
+            <!-- Seção Instagram Feed Automático -->
+            <div class="instagram-section">
+                <h2>📱 Últimas do Instagram</h2>
+                <p class="instagram-description">Acompanhe nossas postagens mais recentes diretamente do Instagram!</p>
+
+                <div id="instagram-feed" class="instagram-feed">
+                    <div class="loading">Carregando postagens do Instagram...</div>
+                    <!-- As postagens serão carregadas automaticamente via JavaScript -->
+                </div>
+
+                <div class="instagram-cta">
+                    <p>Quer ver mais conteúdo? Siga-nos no Instagram!</p>
+                    <a href="https://instagram.com/web.pro.studio" target="_blank" class="btn-instagram">
+                        📷 Seguir @web.pro.studio
+                    </a>
+                </div>
+
+                <!-- Seção de Comentários e Avaliação -->
+                <div class="comments-section">
+                    <h3>Deixe seu comentário, experiência ou crítica</h3>
+                    <form id="comment-form">
+                        <textarea id="comment-text" name="comment" rows="4" placeholder="Escreva seu comentário aqui..." required></textarea>
+                        <div class="rating">
+                            <span>Avaliação:</span>
+                            <div class="stars">
+                                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 estrelas">★</label>
+                                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 estrelas">★</label>
+                                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 estrelas">★</label>
+                                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 estrelas">★</label>
+                                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 estrela">★</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary">Enviar</button>
+                    </form>
+                    <div id="comment-message"></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <footer id="contato" class="footer">
         <div class="container">
-            <p>&copy; 2025 WebPro Studio. Todos os direitos reservados.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>WebPro Studio</h3>
+                    <p>Transformando imagens, transformando vendas.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p><a href="mailto:contato@webprostudio.com.br" style="color: inherit; text-decoration: none;">contato@webprostudio.com.br</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <p>Instagram: <a href="https://www.instagram.com/web.pro.studio?igsh=MW51eTh4cWJ3NnFlNQ%3D%3D&utm_source=qr" target="_blank" style="color: inherit; text-decoration: none;">@web.pro.studio</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/5511991854713?text=Gostaria%20de%20saber%20mais%20sobre%20o%20serviço" target="_blank" style="color: inherit; text-decoration: none;">(11) 99185-4713</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 WebPro Studio. Todos os direitos reservados.</p>
+            </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
+    <script src="instagram-feed.js"></script>
 </body>
 </html>
