@@ -41,6 +41,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .nav-logo h2 {
@@ -48,17 +49,24 @@ body {
     font-size: 1.8rem;
     font-weight: 700;
     margin: 0;
+    white-space: nowrap;
 }
 
 .nav-logo img {
     height: 50px;
     width: auto;
+    flex-shrink: 0;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 2rem;
+}
+
+.nav-menu li {
+    flex: 1;
+    text-align: center;
 }
 
 .nav-menu a {
@@ -360,10 +368,6 @@ body {
     text-align: center;
 }
 
-.beneficio-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
 
 .beneficio-card h3 {
     font-size: 1.5rem;
@@ -577,16 +581,20 @@ body {
         text-align: center;
         padding: 100px 1rem 60px;
     }
-    
+
+    .blog {
+        padding-top: 120px;
+    }
+
     .hero-content h1 {
         font-size: 2rem;
     }
-    
+
     .hero-buttons {
         justify-content: center;
         flex-wrap: wrap;
     }
-    
+
     .stats-grid,
     .beneficios-grid,
     .planos-grid,
@@ -594,11 +602,11 @@ body {
     .footer-content {
         grid-template-columns: 1fr;
     }
-    
+
     .sobre-content {
         grid-template-columns: 1fr;
     }
-    
+
     /* Menu Mobile Styles */
     .nav-menu {
         display: none;
@@ -614,17 +622,17 @@ body {
         z-index: 999;
         border-top: 2px solid #ff6b35;
     }
-    
+
     .nav-menu.active {
         display: flex;
         animation: slideDown 0.3s ease-out;
     }
-    
+
     .nav-menu li {
         width: 100%;
         text-align: center;
     }
-    
+
     .nav-menu a {
         display: block;
         padding: 0.8rem 1rem;
@@ -634,13 +642,13 @@ body {
         border-radius: 6px;
         transition: all 0.3s ease;
     }
-    
+
     .nav-menu a:hover {
         background: #ff6b35;
         color: white;
         transform: translateX(5px);
     }
-    
+
     /* Menu Toggle Button */
     .menu-toggle {
         display: block !important;
@@ -653,17 +661,17 @@ body {
         border-radius: 4px;
         transition: all 0.3s ease;
     }
-    
+
     .menu-toggle:hover {
         background: #f7fafc;
         color: #ff6b35;
     }
-    
+
     .menu-toggle.active {
         color: #ff6b35;
         transform: rotate(90deg);
     }
-    
+
     /* Overlay para fechar o menu */
     .menu-overlay {
         display: none;
@@ -675,16 +683,16 @@ body {
         background: rgba(0,0,0,0.5);
         z-index: 998;
     }
-    
+
     .menu-overlay.active {
         display: block;
         animation: fadeIn 0.3s ease-out;
     }
-    
+
     .plano-card.popular {
         transform: none;
     }
-    
+
     /* Animações */
     @keyframes slideDown {
         from {
@@ -696,7 +704,7 @@ body {
             transform: translateY(0);
         }
     }
-    
+
     @keyframes fadeIn {
         from {
             opacity: 0;
@@ -708,14 +716,22 @@ body {
 }
 
 @media (max-width: 480px) {
+    .nav-logo h2 {
+        font-size: 1.4rem;
+    }
+
+    .nav-logo img {
+        height: 40px;
+    }
+
     .hero-content h1 {
         font-size: 1.8rem;
     }
-    
+
     .btn-primary, .btn-secondary {
         padding: 0.8rem 1.5rem;
     }
-    
+
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -827,6 +843,22 @@ body {
 
 .btn-whatsapp:hover {
     background: #128c7e;
+}
+
+/* Blog Section */
+.blog {
+    padding-top: 120px;
+}
+
+.blog h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 3rem;
+}
+
+.blog p {
+    text-align: center;
 }
 
 /* Responsividade para orientação */

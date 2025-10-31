@@ -3,12 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebPro Studio - Edição de Fotos para Delivery</title>
+    <title>Edição de Fotos Profissionais para Delivery - WebPro Studio</title>
     <meta name="description" content="Melhore suas imagens para iFood e aumente suas vendas com nosso serviço de edição de fotos profissional.">
     <meta name="keywords" content="edição de fotos para delivery, melhorar imagens para iFood, edição de fotos, fotos profissionais, aumento de vendas">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://webprostudio.com.br/">
+    <meta property="og:title" content="WebPro Studio - Edição de Fotos para Delivery">
+    <meta property="og:description" content="Melhore suas imagens para iFood e aumente suas vendas com nosso serviço de edição de fotos profissional.">
+    <meta property="og:image" content="https://webprostudio.com.br/logow.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://webprostudio.com.br/">
+    <meta property="twitter:title" content="WebPro Studio - Edição de Fotos para Delivery">
+    <meta property="twitter:description" content="Melhore suas imagens para iFood e aumente suas vendas com nosso serviço de edição de fotos profissional.">
+    <meta property="twitter:image" content="https://webprostudio.com.br/logow.png">
+
 <link rel="icon" href="fivecon.ico" type="image/x-icon">
 <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Dados Estruturados JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "WebPro Studio",
+      "url": "https://webprostudio.com.br",
+      "logo": "https://webprostudio.com.br/logow.png",
+      "description": "Serviço profissional de edição de fotos para delivery, especializado em melhorar imagens para iFood, Uber Eats e Rappi.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-11-99185-4713",
+        "contactType": "customer service",
+        "email": "contato@webprostudio.com.br"
+      },
+      "sameAs": [
+        "https://www.instagram.com/web.pro.studio"
+      ],
+      "serviceType": "Edição de Fotos para Delivery",
+      "areaServed": "BR",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Planos de Edição de Fotos",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Plano Básico",
+              "description": "5 imagens com correções básicas"
+            },
+            "price": "49.90",
+            "priceCurrency": "BRL"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Plano Profissional",
+              "description": "15 imagens com edição avançada"
+            },
+            "price": "99.90",
+            "priceCurrency": "BRL"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Plano Premium",
+              "description": "40 imagens com edição premium completa"
+            },
+            "price": "199.90",
+            "priceCurrency": "BRL"
+          }
+        ]
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -19,6 +93,7 @@
 <h2>WebPro Studio</h2>
             </div>
             <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#beneficios">Benefícios</a></li>
                 <li><a href="#planos">Planos</a></li>
@@ -29,7 +104,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="inicio" class="hero">
         <div class="hero-content">
             <h1>Transforme suas fotos e aumente suas vendas no delivery</h1>
             <p>Deixe suas imagens do iFood, Uber Eats e Rappi irresistíveis com nosso serviço profissional de aprimoramento de imagens</p>
@@ -41,10 +116,10 @@
         <div class="hero-image">
             <div class="image-comparison">
                 <div class="before">
-                    <img src="before-image.jpg" alt="Antes do tratamento" />
+                    <img src="before-image.jpg" alt="Foto de prato antes da edição profissional - imagem original com baixa qualidade" />
                 </div>
                 <div class="after">
-                    <img src="after-image.jpg" alt="Depois do tratamento" />
+                    <img src="after-image.jpg" alt="Foto de prato depois da edição profissional - imagem aprimorada com cores vibrantes e iluminação perfeita" />
                 </div>
             </div>
         </div>
@@ -113,24 +188,20 @@
         <div class="container">
             <h2>Por que escolher o WebPro Studio?</h2>
             <div class="beneficios-grid">
+            <div class="beneficio-card">
+                <h3>🚀 Resultados Rápidos</h3>
+                <p>Entregamos suas imagens aprimoradas em até 24 horas úteis</p>
+            </div>
+            <div class="beneficio-card">
+                <h3>💼 Profissionais Especializados</h3>
+                <p>Equipe com experiência em food photography e edição</p>
+            </div>
                 <div class="beneficio-card">
-                    <div class="beneficio-icon">🚀</div>
-                    <h3>Resultados Rápidos</h3>
-                    <p>Entregamos suas imagens aprimoradas em até 24 horas úteis</p>
-                </div>
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">💼</div>
-                    <h3>Profissionais Especializados</h3>
-                    <p>Equipe com experiência em food photography e edição</p>
-                </div>
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">📱</div>
-                    <h3>Otimizado para Apps</h3>
+                    <h3>📱 Otimizado para Apps</h3>
                     <p>Imagens formatadas especificamente para iFood, Uber Eats e Rappi</p>
                 </div>
                 <div class="beneficio-card">
-                    <div class="beneficio-icon">💸</div>
-                    <h3>Preço Acessível</h3>
+                    <h3>💸 Preço Acessível</h3>
                     <p>Serviço profissional por um preço que cabe no seu negócio</p>
                 </div>
             </div>
@@ -195,6 +266,7 @@
                     <div class="depoimento-text">
                         "As vendas do meu hamburguer artesanal aumentaram 50% depois que melhorei as fotos no iFood. Valeu cada centavo!"
                     </div>
+                    <div class="stars">★★★★★</div>
                     <div class="depoimento-author">
                         <strong>Carlos - Hamburgueria Artesanal</strong>
                     </div>
@@ -203,6 +275,7 @@
                     <div class="depoimento-text">
                         "Finalmente minhas pizzas parecem tão gostosas na foto quanto são na realidade. Clientes não param de elogiar!"
                     </div>
+                    <div class="stars">★★★★★</div>
                     <div class="depoimento-author">
                         <strong>Ana - Pizzaria Donatello</strong>
                     </div>
@@ -211,6 +284,7 @@
                     <div class="depoimento-text">
                         "O serviço é rápido e as imagens ficaram perfeitas. Agora meus pratos se destacam entre os concorrentes."
                     </div>
+                    <div class="stars">★★★★★</div>
                     <div class="depoimento-author">
                         <strong>Ricardo - Comida Japonesa Sushi</strong>
                     </div>
@@ -275,6 +349,12 @@
         </div>
     </footer>
 
+    <script>
+        // Redirecionar para a âncora #inicio se não estiver presente na URL
+        if (!window.location.hash) {
+            window.location.hash = '#inicio';
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

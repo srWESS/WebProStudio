@@ -289,20 +289,6 @@
         
         // Configurar menu mobile
         setupMobileMenu();
-
-        // Abrir menu mobile automaticamente na página inicial
-        if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname === '') {
-            const navMenu = document.querySelector('.nav-menu');
-            const menuToggle = document.querySelector('.menu-toggle');
-            const overlay = document.querySelector('.menu-overlay');
-            if (navMenu && menuToggle && overlay) {
-                navMenu.classList.add('active');
-                overlay.classList.add('active');
-                menuToggle.classList.add('active');
-                menuToggle.innerHTML = '✕';
-                document.body.style.overflow = 'hidden';
-            }
-        }
         
         // Configurar parallax
         setupParallax();
