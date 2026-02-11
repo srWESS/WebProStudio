@@ -742,6 +742,9 @@ function initScrollPageNavigation() {
     const nextPageUrl = body.dataset.nextPage;
     const prevPageUrl = body.dataset.prevPage;
 
+    // Only enable navigation if there are next/prev pages defined
+    if (!nextPageUrl && !prevPageUrl) return;
+
     let isNavigating = false;
     let throttleTimer = false;
 
