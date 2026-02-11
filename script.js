@@ -476,15 +476,25 @@ function initScrollEffects() {
 function initTheme() {
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
-    let currentTheme = localStorage.getItem('theme') || 'light';
-    
+    let currentTheme = 'light';
+
+    try {
+        currentTheme = localStorage.getItem('theme') || 'light';
+    } catch (e) {
+        console.log('localStorage not available, using default theme');
+    }
+
     function setTheme(theme) {
         currentTheme = theme;
-        localStorage.setItem('theme', theme);
-        
+        try {
+            localStorage.setItem('theme', theme);
+        } catch (e) {
+            console.log('Could not save theme to localStorage');
+        }
+
         const icon = themeToggle?.querySelector('i');
         const text = themeToggle?.querySelector('.theme-text');
-        
+
         if (theme === 'dark') {
             body.classList.add('dark-mode');
             if (icon) {
@@ -501,13 +511,13 @@ function initTheme() {
             if (text) text.textContent = 'Dark';
         }
     }
-    
+
     if (themeToggle) {
         setTheme(currentTheme);
         themeToggle.addEventListener('click', () => {
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
             setTheme(newTheme);
-            
+
             if (typeof anime !== 'undefined') {
                 anime({
                     targets: themeToggle,
