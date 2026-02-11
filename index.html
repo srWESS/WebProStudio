@@ -1,360 +1,746 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="PT-BR" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edição de Fotos Profissionais para Delivery - WebPro Studio</title>
-    <meta name="description" content="Melhore suas imagens para iFood e aumente suas vendas com nosso serviço de edição de fotos profissional.">
-    <meta name="keywords" content="edição de fotos para delivery, melhorar imagens para iFood, edição de fotos, fotos profissionais, aumento de vendas">
-
-    <!-- Open Graph / Facebook -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>WebPro Studio - Soluções E-commerce para Seu Negócio</title>
+    <meta name="description" content="WebPro Studio - Soluções E-commerce para Seu Negócio">
+    <meta name="keywords" content="e-commerce, loja virtual, lanchonete, adega, barbearia, desenvolvimento web">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="WebPro Studio - Soluções E-commerce">
+    <meta property="og:description" content="Transformando negócios em experiências digitais que impressionam.">
+    <meta property="og:image" content="https://www.webprostudio.com.br/1.png">
+    <meta property="og:url" content="https://www.webprostudio.com.br">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://webprostudio.com.br/">
-    <meta property="og:title" content="WebPro Studio - Edição de Fotos para Delivery">
-    <meta property="og:description" content="Melhore suas imagens para iFood e aumente suas vendas com nosso serviço de edição de fotos profissional.">
-    <meta property="og:image" content="https://webprostudio.com.br/logow.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WebPro Studio - Soluções E-commerce">
+    <meta name="twitter:description" content="Transformando negócios em experiências digitais que impressionam.">
+    <meta name="twitter:image" content="https://www.webprostudio.com.br/1.png">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://webprostudio.com.br/">
-    <meta property="twitter:title" content="WebPro Studio - Edição de Fotos para Delivery">
-    <meta property="twitter:description" content="Melhore suas imagens para iFood e aumente suas vendas com nosso serviço de edição de fotos profissional.">
-    <meta property="twitter:image" content="https://webprostudio.com.br/logow.png">
-
-<link rel="icon" href="fivecon.ico" type="image/x-icon">
-<link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Dados Estruturados JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "WebPro Studio",
-      "url": "https://webprostudio.com.br",
-      "logo": "https://webprostudio.com.br/logow.png",
-      "description": "Serviço profissional de edição de fotos para delivery, especializado em melhorar imagens para iFood, Uber Eats e Rappi.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+55-11-99185-4713",
-        "contactType": "customer service",
-        "email": "contato@webprostudio.com.br"
-      },
-      "sameAs": [
-        "https://www.instagram.com/web.pro.studio"
-      ],
-      "serviceType": "Edição de Fotos para Delivery",
-      "areaServed": "BR",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Planos de Edição de Fotos",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Plano Básico",
-              "description": "5 imagens com correções básicas"
-            },
-            "price": "49.90",
-            "priceCurrency": "BRL"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Plano Profissional",
-              "description": "15 imagens com edição avançada"
-            },
-            "price": "99.90",
-            "priceCurrency": "BRL"
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Plano Premium",
-              "description": "40 imagens com edição premium completa"
-            },
-            "price": "199.90",
-            "priceCurrency": "BRL"
-          }
-        ]
-      }
-    }
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Fira+Code:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="1.png" type="image/png">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-logo">
-<img src="logow.png" alt="Logo" style="height: 50px; margin-right: 10px;">
-<h2>WebPro Studio</h2>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#beneficios">Benefícios</a></li>
-                <li><a href="#planos">Planos</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
+    
+    <header class="header" id="header">
+        <div class="header-container">
+            <nav class="nav">
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="#home" class="nav-brand">
+                    <img src="1.png" alt="WebPro Studio" class="brand-logo-img">
+                    <span class="brand-text">WebPro Studio</span>
+                </a>
+                <div class="nav-menu" id="navMenu">
+                    <div class="mobile-menu-header">
+                        <span class="menu-title">MENU</span>
+                    </div>
+                    <div class="mobile-search">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="O que você procura hoje?">
+                    </div>
+
+                    <a href="#home" class="nav-link active" data-section="home">
+                        <span class="nav-text">Home</span>
+                    </a>
+                    <a href="#hacks" class="nav-link" data-section="hacks">
+                        <span class="nav-text">Portfólio</span>
+                    </a>
+                    <a href="#about" class="nav-link" data-section="about">
+                        <span class="nav-text">Sobre</span>
+                    </a>
+                    <a href="#services" class="nav-link" data-section="services">
+                        <span class="nav-text">Serviços</span>
+                    </a>
+                    <a href="#certifications" class="nav-link" data-section="certifications">
+                        <span class="nav-text">Depoimentos</span>
+                    </a>
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <span class="nav-text">Contato</span>
+                    </a>
+                </div>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                        <span class="theme-text">Dark</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Transforme suas fotos e aumente suas vendas no delivery</h1>
-            <p>Deixe suas imagens do iFood, Uber Eats e Rappi irresistíveis com nosso serviço profissional de aprimoramento de imagens</p>
-            <div class="hero-buttons">
-                <button class="btn-primary" onclick="scrollToSection('planos')">Quero melhorar minhas fotos</button>
-                <button class="btn-secondary" onclick="scrollToSection('sobre')">Como funciona</button>
+    <main class="main">
+        
+        <section id="home" class="section hero">
+            <div class="hero-bg">
             </div>
-        </div>
-        <div class="hero-image">
-            <div class="image-comparison">
-                <div class="before">
-                    <img src="before-image.jpg" alt="Foto de prato antes da edição profissional - imagem original com baixa qualidade" />
-                </div>
-                <div class="after">
-                    <img src="after-image.jpg" alt="Foto de prato depois da edição profissional - imagem aprimorada com cores vibrantes e iluminação perfeita" />
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <div class="badge-pulse"></div>
+                        <i class="fas fa-shield-check"></i>
+                        <span>ESPECIALISTA EM E-COMMERCE</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-word" data-word="LOJAS">LOJAS</span>
+                        <span class="title-word highlight" data-word="VIRTUAIS">VIRTUAIS</span>
+                        <span class="title-word" data-word="PARA SEU NEGÓCIO">PARA SEU NEGÓCIO</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        <span class="subtitle-text">Lanchonetes</span>
+                        <span class="subtitle-separator">|</span>
+                        <span class="subtitle-text">Adegas</span>
+                        <span class="subtitle-separator">|</span>
+                        <span class="subtitle-text">Barbearias</span>
+                    </div>
+                    <p class="hero-description">
+                        Transformando negócios em experiências digitais que impressionam.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-count="500" data-prefix="+">0</div>
+                                <div class="stat-label">Lojas Criadas</div>
+                            </div>
+                            <div class="stat-glow"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-count="3">0</div>
+                                <div class="stat-label">Anos de Experiência</div>
+                            </div>
+                            <div class="stat-glow"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-count="15" data-prefix="+">0</div>
+                                <div class="stat-label">Parceiros</div>
+                            </div>
+                            <div class="stat-glow"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-count="200" data-prefix="+">0</div>
+                                <div class="stat-label">Clientes Atendidos</div>
+                            </div>
+                            <div class="stat-glow"></div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Solicitar Orçamento</span>
+                            <i class="fas fa-shopping-cart"></i>
+                            <div class="btn-shine"></div>
+                        </a>
+                        <a href="#services" class="btn btn-secondary">
+                            <span>Ver Serviços</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="scroll-hint">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span>Role para explorar</span>
+            </div>
+        </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>+87%</h3>
-                    <p>Aumento no engajamento</p>
+        <section id="hacks" class="section hacks-section">
+            <div class="section-bg">
+                <div class="section-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">00</span>
+                    <h2 class="section-title">
+                        <span class="title-text">Projetos</span>
+                        <span class="title-underline"></span>
+                    </h2>
                 </div>
-                <div class="stat-item">
-                    <h3>+63%</h3>
-                    <p>Mais cliques nas fotos</p>
-                </div>
-                <div class="stat-item">
-                    <h3>+45%</h3>
-                    <p>Aumento nas vendas</p>
-                </div>
-                <div class="stat-item">
-                    <h3>24h</h3>
-                    <p>Entrega rápida</p>
+                <div class="hacks-slider">
+                    <div class="slider-main-container">
+                        <div class="slider-viewport">
+                            <div class="slider-track" id="sliderTrack">
+                                <div class="slider-slide active">
+                                    <div class="slide-card">
+                                        <div class="slide-bg-gradient slide-bg-1"></div>
+                                        <div class="slide-pattern"></div>
+                                        <div class="slide-content-wrapper">
+                                            <div class="slide-icon-container">
+                                                <div class="slide-icon-border"></div>
+                                                <i class="fas fa-hamburger"></i>
+                                                <div class="icon-ripple"></div>
+                                            </div>
+                                            <h3 class="slide-title">Lanchonete Digital</h3>
+                                            <p class="slide-description">Loja virtual completa para lanchonete com cardápio online e pedidos via WhatsApp</p>
+                                            <a href="https://sua-lanchonete.vercel.app/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                                <span>Visite</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                                <div class="btn-shine"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-slide">
+                                    <div class="slide-card">
+                                        <div class="slide-bg-gradient slide-bg-2"></div>
+                                        <div class="slide-pattern"></div>
+                                        <div class="slide-content-wrapper">
+                                            <div class="slide-icon-container">
+                                                <div class="slide-icon-border"></div>
+                                                <i class="fas fa-wine-bottle"></i>
+                                                <div class="icon-ripple"></div>
+                                            </div>
+                                            <h3 class="slide-title">Adega Virtual</h3>
+                                            <p class="slide-description">E-commerce completo para adegas com catálogo de bebidas e sistema de pedidos</p>
+                                            <a href="https://sua-adega-five.vercel.app/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                                <span>Visite</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                                <div class="btn-shine"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-slide">
+                                    <div class="slide-card">
+                                        <div class="slide-bg-gradient slide-bg-3"></div>
+                                        <div class="slide-pattern"></div>
+                                        <div class="slide-content-wrapper">
+                                            <div class="slide-icon-container">
+                                                <div class="slide-icon-border"></div>
+                                                <i class="fas fa-cut"></i>
+                                                <div class="icon-ripple"></div>
+                                            </div>
+                                            <h3 class="slide-title">Barbearia Online</h3>
+                                            <p class="slide-description">Plataforma completa para barbearias com agendamento online e sistema de delivery</p>
+                                            <a href="https://sua-barbearia.vercel.app/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                                <span>Visite</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                                <div class="btn-shine"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-slide">
+                                    <div class="slide-card">
+                                        <div class="slide-bg-gradient slide-bg-4"></div>
+                                        <div class="slide-pattern"></div>
+                                        <div class="slide-content-wrapper">
+                                            <div class="slide-icon-container">
+                                                <div class="slide-icon-border"></div>
+                                                <i class="fas fa-spa"></i>
+                                                <div class="icon-ripple"></div>
+                                            </div>
+                                            <h3 class="slide-title">Salão de Beleza Online</h3>
+                                            <p class="slide-description">Plataforma para salões de beleza com agendamento online e catálogo de produtos</p>
+                                            <a href="https://sua-estetica.vercel.app/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                                <span>Visite</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                                <div class="btn-shine"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-slide">
+                                    <div class="slide-card">
+                                        <div class="slide-bg-gradient slide-bg-5"></div>
+                                        <div class="slide-pattern"></div>
+                                        <div class="slide-content-wrapper">
+                                            <div class="slide-icon-container">
+                                                <div class="slide-icon-border"></div>
+                                                <i class="fas fa-calendar-alt"></i>
+                                                <div class="icon-ripple"></div>
+                                            </div>
+                                            <h3 class="slide-title">Agenda Pessoal</h3>
+                                            <p class="slide-description">Organize seus compromissos e tarefas diárias com uma agenda digital inteligente e fácil de usar</p>
+                                            <a href="https://sua-agenda-two.vercel.app/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                                <span>Visite</span>
+                                                <i class="fas fa-external-link-alt"></i>
+                                                <div class="btn-shine"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-controls">
+                            <button class="slider-nav-btn prev-btn" id="prevBtn">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <div class="slider-indicators" id="sliderIndicators"></div>
+                            <button class="slider-nav-btn next-btn" id="nextBtn">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="slider-footer">
+                            <div class="slider-counter">
+                                <span class="current-slide" id="currentSlide">01</span>
+                                <span class="slide-separator">/</span>
+                                <span class="total-slides" id="totalSlides">05</span>
+                            </div>
+                            <div class="slider-progress-wrapper">
+                                <div class="slider-progress-bar">
+                                    <div class="slider-progress-fill" id="sliderProgress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sobre Section -->
-    <section id="sobre" class="sobre">
-        <div class="container">
-            <h2>Como transformamos suas fotos</h2>
-            <div class="sobre-content">
-                <div class="sobre-text">
-                    <p>Sabemos que uma boa imagem pode fazer toda a diferença no delivery. Muitos restaurantes perdem vendas por usar fotos escuras, desfocadas ou com má qualidade.</p>
-                    <p>Nosso serviço profissional transforma suas imagens com:</p>
-                    <ul>
-                        <li>✅ Correção de cores e iluminação</li>
-                        <li>✅ Remoção de ruídos e imperfeições</li>
-                        <li>✅ Ajuste de contraste e saturação</li>
-                        <li>✅ Melhoria de foco e nitidez</li>
-                        <li>✅ Formatação ideal para plataformas</li>
-                    </ul>
+        <section id="about" class="section about-section">
+            <div class="section-bg">
+                <div class="section-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">
+                        <span class="title-text">Sobre</span>
+                        <span class="title-underline"></span>
+                    </h2>
                 </div>
-                <div class="sobre-processo">
-                    <div class="processo-step">
-                        <span>1</span>
-                        <p>Você envia suas fotos atuais</p>
+                <div class="about-wrapper">
+                    <div class="about-intro-section">
+                        <div class="about-badge">
+                            <i class="fas fa-store"></i>
+                            <span>Empresa Especializada</span>
+                        </div>
+                        <p class="about-text">
+                            Somos especialistas na criação de lojas virtuais modernas e funcionais, desenvolvidas sob medida para lanchonetes, distribuidoras de bebidas, barbearias, clínicas de estética e diversos outros segmentos do comércio. Nosso objetivo é oferecer soluções digitais que ampliem a visibilidade do seu negócio, facilitem o atendimento ao cliente e aumentem suas vendas, sempre com design atrativo, navegação intuitiva e tecnologia de ponta.
+                        </p>
                     </div>
-                    <div class="processo-step">
-                        <span>2</span>
-                        <p>Nossa equipe trabalha nas melhorias</p>
-                    </div>
-                    <div class="processo-step">
-                        <span>3</span>
-                        <p>Receba suas imagens aprimoradas em 24h</p>
+                    <div class="about-grid">
+                        <div class="about-content">
+                            <div class="about-features">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">E-commerce Completo</h3>
+                                    <p class="feature-desc">Desenvolvimento de lojas virtuais completas com todas as funcionalidades necessárias para vendas online.</p>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">Design Responsivo</h3>
+                                    <p class="feature-desc">Lojas que funcionam perfeitamente em desktop, tablet e celular.</p>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">Pagamentos Seguros</h3>
+                                    <p class="feature-desc">Finalize seu pedido e pagamento com segurança pelo WhatsApp.</p>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">Suporte Especializado</h3>
+                                    <p class="feature-desc">Equipe técnica dedicada para manutenção e suporte contínuo.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Benefícios Section -->
-    <section id="beneficios" class="beneficios">
-        <div class="container">
-            <h2>Por que escolher o WebPro Studio?</h2>
-            <div class="beneficios-grid">
-            <div class="beneficio-card">
-                <h3>🚀 Resultados Rápidos</h3>
-                <p>Entregamos suas imagens aprimoradas em até 24 horas úteis</p>
+        <section id="services" class="section services-section">
+            <div class="section-bg">
+                <div class="section-pattern"></div>
             </div>
-            <div class="beneficio-card">
-                <h3>💼 Profissionais Especializados</h3>
-                <p>Equipe com experiência em food photography e edição</p>
-            </div>
-                <div class="beneficio-card">
-                    <h3>📱 Otimizado para Apps</h3>
-                    <p>Imagens formatadas especificamente para iFood, Uber Eats e Rappi</p>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">
+                        <span class="title-text">Serviços</span>
+                        <span class="title-underline"></span>
+                    </h2>
                 </div>
-                <div class="beneficio-card">
-                    <h3>💸 Preço Acessível</h3>
-                    <p>Serviço profissional por um preço que cabe no seu negócio</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-store"></i>
+                                <div class="icon-glow"></div>
+                            </div>
+                            <div class="service-number">01</div>
+                        </div>
+                        <h3 class="service-title">Criação de Lojas Virtuais</h3>
+                        <p class="service-description">
+                            Desenvolvimento completo de e-commerce personalizado para seu negócio, com design responsivo e funcionalidades avançadas.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Design Responsivo</li>
+                            <li><i class="fas fa-check"></i> Catálogo de Produtos</li>
+                            <li><i class="fas fa-check"></i> Carrinho de Compras</li>
+                            <li><i class="fas fa-check"></i> Gestão Simplificada</li>
+                        </ul>
+                        <div class="service-footer">
+                            <button onclick="window.location.href='https://wa.me/5511991854713?text=Gostaria%20de%20saber%20mais%20sobre%20a%20criação%20de%20lojas%20virtuais...'" class="service-link">
+                                <span>Saiba Mais</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                                <div class="icon-glow"></div>
+                            </div>
+                            <div class="service-number">02</div>
+                        </div>
+                        <h3 class="service-title">Gestão de Pedidos</h3>
+                        <p class="service-description">
+                            Cálculo de frete, regras de pedido mínimo e validação de área de entrega, com fechamento seguro via WhatsApp.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Cálculo Automático de Frete</li>
+                            <li><i class="fas fa-check"></i> Trava para Pedido Mínimo</li>
+                            <li><i class="fas fa-check"></i> Trava para Área de Entrega</li>
+                            <li><i class="fas fa-check"></i> Confirmação via WhatsApp</li>
+                        </ul>
+                        <div class="service-footer">
+                            <button onclick="window.location.href='https://wa.me/5511991854713?text=Gostaria%20de%20saber%20mais%20sobre%20a%20gestão%20de%20pedidos...'" class="service-link">
+                                <span>Saiba Mais</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-tools"></i>
+                                <div class="icon-glow"></div>
+                            </div>
+                            <div class="service-number">03</div>
+                        </div>
+                        <h3 class="service-title">Suporte e Manutenção</h3>
+                        <p class="service-description">
+                            Suporte técnico contínuo, atualizações de segurança e manutenção para garantir o funcionamento perfeito da sua loja.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Suporte 24/7</li>
+                            <li><i class="fas fa-check"></i> Atualizações de Segurança</li>
+                            <li><i class="fas fa-check"></i> Backup Automático</li>
+                            <li><i class="fas fa-check"></i> Monitoramento</li>
+                        </ul>
+                        <div class="service-footer">
+                            <button onclick="window.location.href='https://wa.me/5511991854713?text=Gostaria%20de%20saber%20mais%20sobre%20o%20suporte%20e%20manutenção...'" class="service-link">
+                                <span>Saiba Mais</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Planos Section -->
-    <section id="planos" class="planos">
-        <div class="container">
-            <h2>Escolha o plano ideal para seu negócio</h2>
-            <div class="planos-grid">
-                <div class="plano-card">
-                    <h3>Plano Básico</h3>
-                    <div class="preco">R$ 49,90</div>
-                    <p>Para pequenos estabelecimentos</p>
-                    <ul>
-                        <li>✅ 5 imagens</li>
-                        <li>✅ Correções básicas</li>
-                        <li>✅ Formatação padrão</li>
-                        <li>✅ Suporte por email</li>
-                    </ul>
-                    <button class="btn-primary" onclick="window.location.href='orientacao.html?plano=basico'">Começar agora</button>
+        <section id="certifications" class="section certs-section">
+            <div class="section-bg">
+                <div class="section-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 class="section-title">
+                        <span class="title-text">O que nossos clientes dizem</span>
+                        <span class="title-underline"></span>
+                    </h2>
                 </div>
-                <div class="plano-card popular">
-                    <div class="popular-badge">Mais Popular</div>
-                    <h3>Plano Profissional</h3>
-                    <div class="preco">R$ 99,90</div>
-                    <p>Para restaurantes em crescimento</p>
-                    <ul>
-                        <li>✅ 15 imagens</li>
-                        <li>✅ Edição avançada</li>
-                        <li>✅ Background profissional</li>
-                        <li>✅ Prioridade na entrega</li>
-                        <li>✅ Suporte prioritário</li>
-                    </ul>
-                    <button class="btn-primary" onclick="window.location.href='orientacao.html?plano=profissional'">Começar agora</button>
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <i class="fas fa-hamburger"></i>
+                            <div class="badge-pulse"></div>
+                        </div>
+                        <div style="color: var(--warning); margin-bottom: 1rem;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="cert-title" style="font-size: 1.5rem;">Carlos Silva</h3>
+                        <p class="cert-name">Burger King da Esquina</p>
+                        <p class="cert-org">"Minha lanchonete vende muito mais agora com o cardápio digital. O sistema de pedidos no WhatsApp é incrível!"</p>
+                        <div class="cert-glow"></div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <i class="fas fa-wine-bottle"></i>
+                            <div class="badge-pulse"></div>
+                        </div>
+                        <div style="color: var(--warning); margin-bottom: 1rem;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="cert-title" style="font-size: 1.5rem;">Fernanda Lima</h3>
+                        <p class="cert-name">Adega Premium</p>
+                        <p class="cert-org">"A adega virtual organizou todo o meu estoque. Meus clientes adoram a facilidade de pedir pelo site."</p>
+                        <div class="cert-glow"></div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <i class="fas fa-cut"></i>
+                            <div class="badge-pulse"></div>
+                        </div>
+                        <div style="color: var(--warning); margin-bottom: 1rem;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="cert-title" style="font-size: 1.5rem;">Roberto Santos</h3>
+                        <p class="cert-name">Barbearia Estilo</p>
+                        <p class="cert-org">"O agendamento online acabou com os furos na minha agenda. Meus clientes marcam horário sozinhos."</p>
+                        <div class="cert-glow"></div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <i class="fas fa-spa"></i>
+                            <div class="badge-pulse"></div>
+                        </div>
+                        <div style="color: var(--warning); margin-bottom: 1rem;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="cert-title" style="font-size: 1.5rem;">Dra. Ana Paula</h3>
+                        <p class="cert-name">Estética Renovare</p>
+                        <p class="cert-org">"Nossas clientes agora podem agendar procedimentos online, o que otimizou muito nosso atendimento na recepção."</p>
+                        <div class="cert-glow"></div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <i class="fas fa-paw"></i>
+                            <div class="badge-pulse"></div>
+                        </div>
+                        <div style="color: var(--warning); margin-bottom: 1rem;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3 class="cert-title" style="font-size: 1.5rem;">Juliana Costa</h3>
+                        <p class="cert-name">Pet Amigo</p>
+                        <p class="cert-org">"O sistema de agendamento para banho e tosa é fantástico. Nossos clientes amam a praticidade!"</p>
+                        <div class="cert-glow"></div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <i class="fas fa-utensils"></i>
+                            <div class="badge-pulse"></div>
+                        </div>
+                        <div style="color: var(--warning); margin-bottom: 1rem;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="cert-title" style="font-size: 1.5rem;">Marcos Oliveira</h3>
+                        <p class="cert-name">Sabor & Arte</p>
+                        <p class="cert-org">"Com o cardápio online, nossos pedidos para delivery aumentaram 40%. A plataforma é rápida e estável."</p>
+                        <div class="cert-glow"></div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <i class="fas fa-tshirt"></i>
+                            <div class="badge-pulse"></div>
+                        </div>
+                        <div style="color: var(--warning); margin-bottom: 1rem;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="cert-title" style="font-size: 1.5rem;">Beatriz Almeida</h3>
+                        <p class="cert-name">Bella Moda</p>
+                        <p class="cert-org">"A loja virtual ficou linda e é super fácil de gerenciar o estoque. As fotos dos produtos ganharam destaque."</p>
+                        <div class="cert-glow"></div>
+                    </div>
+                     <div class="cert-card">
+                        <div class="cert-badge">
+                            <i class="fas fa-laptop"></i>
+                            <div class="badge-pulse"></div>
+                        </div>
+                        <div style="color: var(--warning); margin-bottom: 1rem;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3 class="cert-title" style="font-size: 1.5rem;">Ricardo Mendes</h3>
+                        <p class="cert-name">Tech Imports</p>
+                        <p class="cert-org">"A plataforma de e-commerce é robusta e segura, essencial para vender produtos de alto valor como os nossos."</p>
+                        <div class="cert-glow"></div>
+                    </div>
+                     <div class="cert-card">
+                        <div class="cert-badge">
+                            <i class="fas fa-seedling"></i>
+                            <div class="badge-pulse"></div>
+                        </div>
+                        <div style="color: var(--warning); margin-bottom: 1rem;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="cert-title" style="font-size: 1.5rem;">Lúcia Pereira</h3>
+                        <p class="cert-name">Jardim Encantado</p>
+                        <p class="cert-org">"Nossas flores agora podem ser vistas e compradas por toda a cidade. O site ficou delicado e funcional."</p>
+                        <div class="cert-glow"></div>
+                    </div>
+                     <div class="cert-card">
+                        <div class="cert-badge">
+                            <i class="fas fa-book-open"></i>
+                            <div class="badge-pulse"></div>
+                        </div>
+                        <div style="color: var(--warning); margin-bottom: 1rem;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="cert-title" style="font-size: 1.5rem;">Mariana Andrade</h3>
+                        <p class="cert-name">Livraria Saber</p>
+                        <p class="cert-org">"O sistema de busca e o catálogo online facilitaram a vida dos nossos leitores. As vendas online cresceram muito."</p>
+                        <div class="cert-glow"></div>
+                    </div>
+                     <div class="cert-card">
+                        <div class="cert-badge">
+                            <i class="fas fa-pizza-slice"></i>
+                            <div class="badge-pulse"></div>
+                        </div>
+                        <div style="color: var(--warning); margin-bottom: 1rem;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3 class="cert-title" style="font-size: 1.5rem;">Thiago Nunes</h3>
+                        <p class="cert-name">Pizza Express</p>
+                        <p class="cert-org">"Receber pedidos pelo site e confirmar no WhatsApp é a combinação perfeita. Agilizou nossa produção."</p>
+                        <div class="cert-glow"></div>
+                    </div>
+                     <div class="cert-card">
+                        <div class="cert-badge">
+                            <i class="fas fa-coffee"></i>
+                            <div class="badge-pulse"></div>
+                        </div>
+                        <div style="color: var(--warning); margin-bottom: 1rem;">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="cert-title" style="font-size: 1.5rem;">Laura Martins</h3>
+                        <p class="cert-name">Café Aconchego</p>
+                        <p class="cert-org">"Nossos clientes podem pedir seu café favorito antes mesmo de chegar. O site ficou um charme e é muito prático."</p>
+                        <div class="cert-glow"></div>
+                    </div>
                 </div>
-                <div class="plano-card">
-                    <h3>Plano Premium</h3>
-                    <div class="preco">R$ 199,90</div>
-                    <p>Para grandes redes</p>
-                    <ul>
-                        <li>✅ 40 imagens</li>
-                        <li>✅ Edição premium completa</li>
-                        <li>✅ Background personalizado</li>
-                        <li>✅ Entrega expressa (12h)</li>
-                        <li>✅ Suporte 24/7</li>
-                        <li>✅ Consultoria gratuita</li>
-                    </ul>
-                    <button class="btn-primary" onclick="window.location.href='orientacao.html?plano=premium'">Começar agora</button>
+                <div class="slider-controls" style="margin-top: 2rem; justify-content: center; display: flex; gap: 1rem;">
+                    <button class="slider-nav-btn" id="clientsPrevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-nav-btn" id="clientsNextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Depoimentos Section -->
-    <section class="depoimentos">
-        <div class="container">
-            <h2>O que nossos clientes dizem</h2>
-            <div class="depoimentos-grid">
-                <div class="depoimento-card">
-                    <div class="depoimento-text">
-                        "As vendas do meu hamburguer artesanal aumentaram 50% depois que melhorei as fotos no iFood. Valeu cada centavo!"
-                    </div>
-                    <div class="stars">★★★★★</div>
-                    <div class="depoimento-author">
-                        <strong>Carlos - Hamburgueria Artesanal</strong>
-                    </div>
+        <section id="contact" class="section contact-section">
+            <div class="section-bg">
+                <div class="section-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">
+                        <span class="title-text">Contato</span>
+                        <span class="title-underline"></span>
+                    </h2>
                 </div>
-                <div class="depoimento-card">
-                    <div class="depoimento-text">
-                        "Finalmente minhas pizzas parecem tão gostosas na foto quanto são na realidade. Clientes não param de elogiar!"
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:contato@webprostudio.com.br?subject=Quero%20uma%20loja%20virtual!">contato@webprostudio.com.br</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="contact-details">
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/5511991854713?text=Quero%20uma%20loja%20virtual!" target="_blank">(11) 99185-4713</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Localização</h4>
+                                <a href="https://www.google.com/maps/search/?api=1&query=08694-240" target="_blank">São Paulo, Brasil - CEP: 08694-240</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="stars">★★★★★</div>
-                    <div class="depoimento-author">
-                        <strong>Ana - Pizzaria Donatello</strong>
-                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label">Nome</label>
+                            <input type="text" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Assunto</label>
+                            <input type="text" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Mensagem</label>
+                            <textarea class="form-input form-textarea" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Enviar Mensagem</span>
+                            <i class="fas fa-paper-plane"></i>
+                            <div class="btn-shine"></div>
+                        </button>
+                    </form>
                 </div>
-                <div class="depoimento-card">
-                    <div class="depoimento-text">
-                        "O serviço é rápido e as imagens ficaram perfeitas. Agora meus pratos se destacam entre os concorrentes."
-                    </div>
-                    <div class="stars">★★★★★</div>
-                    <div class="depoimento-author">
-                        <strong>Ricardo - Comida Japonesa Sushi</strong>
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- FAQ Section -->
-    <section class="faq">
-        <div class="container">
-            <h2>Perguntas Frequentes</h2>
-            <div class="faq-item">
-                <h3>Quanto tempo leva para receber minhas imagens?</h3>
-                <p>Entregamos em até 24 horas úteis para a maioria dos planos. O plano Premium tem entrega expressa de 12 horas.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Quais formatos de imagem vocês aceitam?</h3>
-                <p>Aceitamos JPG, PNG e HEIC. As imagens devem ter pelo menos 800x600 pixels para garantir boa qualidade.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Como faço para enviar minhas imagens?</h3>
-                <p>Após a contratação, você receberá um email com um link exclusivo para upload das suas imagens.</p>
-            </div>
-            <div class="faq-item">
-                <h3>E se não gostar do resultado?</h3>
-                <p>Impossível não gostar! Mas oferecemos revisões até você ficar 100% satisfeito com o resultado.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Pronto para transformar suas vendas?</h2>
-            <p>Comece hoje mesmo e veja a diferença que imagens profissionais fazem no seu negócio</p>
-            <button class="btn-primary btn-large" onclick="scrollToSection('planos')">Quero melhorar minhas fotos</button>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contato" class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>WebPro Studio</h3>
-                    <p>Transformando imagens, transformando vendas.</p>
+                <p class="footer-text">
+                    © 2025 WebPro Studio. Todas as vendas protegidas.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                 </div>
-                <div class="footer-section">
-                    <h4>Contato</h4>
-                    <p><a href="mailto:contato@webprostudio.com.br" style="color: inherit; text-decoration: none;">contato@webprostudio.com.br</a></p>
-                </div>
-                <div class="footer-section">
-                    <h4>Redes Sociais</h4>
-                    <p>Instagram: <a href="https://www.instagram.com/web.pro.studio?igsh=MW51eTh4cWJ3NnFlNQ%3D%3D&utm_source=qr" target="_blank" style="color: inherit; text-decoration: none;">@web.pro.studio</a></p>
-                    <p>WhatsApp: <a href="https://wa.me/5511991854713?text=Gostaria%20de%20saber%20mais%20sobre%20o%20serviço" target="_blank" style="color: inherit; text-decoration: none;">(11) 99185-4713</a></p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 WebPro Studio. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Redirecionar para a âncora #inicio se não estiver presente na URL
-        if (!window.location.hash) {
-            window.location.hash = '#inicio';
-        }
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="PT-BR" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Contato - WebPro Studio - Solicite um Orçamento</title>
+    <meta name="description" content="Entre em contato com a WebPro Studio para solicitar um orçamento para sua loja virtual.">
+    <meta name="keywords" content="contato, orçamento, desenvolvimento web, e-commerce, fale conosco">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Contato - WebPro Studio">
+    <meta property="og:description" content="Vamos transformar seu negócio digitalmente? Fale conosco.">
+    <meta property="og:image" content="https://www.webprostudio.com.br/1.png">
+    <meta property="og:url" content="https://www.webprostudio.com.br/contato.html">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Fira+Code:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-prev-page="depoimentos.html">
+    <header class="header" id="header">
+        <div class="header-container">
+            <nav class="nav">
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span><span></span><span></span>
+                </button>
+                <a href="index.html" class="nav-brand">
+                    <img src="1.png" alt="WebPro Studio" class="brand-logo-img">
+                    <span class="brand-text">WebPro Studio</span>
+                </a>
+                <div class="nav-menu" id="navMenu">
+                    <div class="mobile-menu-header"><span class="menu-title">MENU</span></div>
+                    <a href="index.html" class="nav-link"><span class="nav-text">Home</span></a>
+                    <a href="portfolio.html" class="nav-link"><span class="nav-text">Portfólio</span></a>
+                    <a href="sobre.html" class="nav-link"><span class="nav-text">Sobre</span></a>
+                    <a href="servicos.html" class="nav-link"><span class="nav-text">Serviços</span></a>
+                    <a href="depoimentos.html" class="nav-link"><span class="nav-text">Depoimentos</span></a>
+                    <a href="contato.html" class="nav-link active" data-section="contact"><span class="nav-text">Contato</span></a>
+                </div>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i><span class="theme-text">Dark</span></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">04.</span>
+                    <h2 class="section-title">ENTRE EM <span class="highlight">CONTATO</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:contato@webprostudio.com.br">contato@webprostudio.com.br</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="contact-details">
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/5511999999999" target="_blank">(11) 99999-9999</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label">Nome Completo</label>
+                            <input type="text" class="form-input" required placeholder="Seu nome">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" required placeholder="seu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Assunto</label>
+                            <input type="text" class="form-input" required placeholder="Orçamento para Loja Virtual">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Mensagem</label>
+                            <textarea class="form-input form-textarea" required placeholder="Descreva seu projeto..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Enviar Mensagem</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
