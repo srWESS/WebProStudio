@@ -1371,6 +1371,7 @@ body.is-loaded {
     background: radial-gradient(circle, rgba(0,212,255,0.15) 0%, transparent 60%);
     opacity: 0;
     transition: opacity 0.4s ease;
+    pointer-events: none;
 }
 
 .service-card:hover::before {
